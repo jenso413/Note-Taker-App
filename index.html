@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Taker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="title">
@@ -13,20 +14,22 @@
     </div>
     <div class="note-input">
         <label for="note">Note:</label>
-        <input type="text" name="note" id="note">
+        <input type="text" name="note" id="note" placeholder="Write your note here">
     </div>
-    <button>Add Note</button>
+    <button id="add-note">Add Note</button>
     <section class="note-container">
         <div class="note">
-            <h3>Hello</h3>
-            <p>Hello my name is</p>
-            <button>Michael</button>
+            <h3>Note1</h3>
+            <p>Hello my name is Andy Connnners</p>
+            <button class="details">View Details</button>
         </div>
         <div class="note">
             <h3>Hello</h3>
             <p>Hello my name is</p>
-            <button>Michael</button>
+            <button class="details">Michael</button>
         </div>
     </section>
+
+    <script src="app.js"></script>
 </body>
 </html>

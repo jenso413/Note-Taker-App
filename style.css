@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Title */
+
+h1 {
+    font-size: 7rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: rgb(43, 175, 43);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Note input */
+
+.note-input {
+    width: 60%;
+    display: flex;
+    gap: 1rem;
+}
+
+.note-input label {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+#note {
+    flex: 1;
+    padding: 5px 0 40px 10px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+/* Button */
+
+#add-note {
+    padding: 15px;
+    color: white;
+    background-color: rgb(43, 175, 43);
+    border-radius: 5px;
+    border-style: none;
+}
+
+/* Note Container */
+
+.note-container {
+    display: flex;
+    gap: 2rem;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    gap: 2rem;
+    border: 1px solid lightgray;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.details {
+    color: white;
+    background-color:dodgerblue;
+    border-style: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.note h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
