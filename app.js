@@ -23,6 +23,9 @@ document.getElementById('add-note').addEventListener('click', function() {
     // Adding style to button
     noteButton.classList.add('details');
 
+    // Adding class to h3
+    noteTitle.classList.add('noteNumber')
+
     // Adding values to notes
     noteContent.innerText = noteInput.value;
     noteButton.innerText = 'View Details'
@@ -60,5 +63,16 @@ document.getElementById('add-note').addEventListener('click', function() {
         // Toggle classlist to hide modal
         document.querySelector('.modal-bg').classList.toggle('bg-active')
     })
+
+
+
+    // Track note number to display
+    let numberOfNotes = document.querySelector('.note-container').getElementsByClassName('noteNumber')
+    numberOfNotes = Array.from(numberOfNotes)
+    console.log(numberOfNotes)
+
+    for(let i = 0; i < numberOfNotes.length; i++) {
+        numberOfNotes[i].innerText = `Note${i+1}`
+    }
 })
 
