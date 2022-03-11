@@ -49,11 +49,13 @@ document.getElementById('add-note').addEventListener('click', function() {
         // Create modal variable to store content
         const modal = document.querySelector('.modal')
 
-        let modalContent = noteContent.cloneNode(true);
-        console.log(modalContent)
+        // If modal has no content
+        if (modal.children.length <= 1) {
+            let modalContent = noteContent.cloneNode(true);
 
-        // Append information to modal
-        modal.appendChild(modalContent);
+            // Append information to modal
+            modal.appendChild(modalContent);
+        }
 
     });
 
