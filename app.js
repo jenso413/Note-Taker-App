@@ -4,6 +4,9 @@
 
 let noteInput = document.getElementById('note');
 
+// Create modal variable to store content
+const modal = document.querySelector('.modal')
+
 document.getElementById('add-note').addEventListener('click', function() {
     
     // Create new div
@@ -39,15 +42,11 @@ document.getElementById('add-note').addEventListener('click', function() {
     // Clear input value
     noteInput.value = '';
 
-
     // Show modal when 'view details' is clicked
     noteButton.addEventListener('click', function() {
         
         // Show modal on click
         document.querySelector('.modal-bg').classList.add('bg-active')
-
-        // Create modal variable to store content
-        const modal = document.querySelector('.modal')
 
         // If modal has no content
         if (modal.children.length <= 1) {
