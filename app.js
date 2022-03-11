@@ -44,13 +44,16 @@ document.getElementById('add-note').addEventListener('click', function() {
     noteButton.addEventListener('click', function() {
         
         // Show modal on click
-        document.querySelector('.modal-bg').classList.toggle('bg-active')
+        document.querySelector('.modal-bg').classList.add('bg-active')
 
         // Create modal variable to store content
         const modal = document.querySelector('.modal')
 
+        let modalContent = noteContent.cloneNode(true);
+        console.log(modalContent)
+
         // Append information to modal
-        modal.appendChild(noteContent)
+        modal.appendChild(modalContent);
 
     });
 
@@ -61,16 +64,16 @@ document.getElementById('add-note').addEventListener('click', function() {
     hideModal.addEventListener('click', function() {
 
         // Toggle classlist to hide modal
-        document.querySelector('.modal-bg').classList.toggle('bg-active')
+        document.querySelector('.modal-bg').classList.remove('bg-active')
     })
 
 
 
-    // Track note number to display
+    // Track note number to display in an array
     let numberOfNotes = document.querySelector('.note-container').getElementsByClassName('noteNumber')
     numberOfNotes = Array.from(numberOfNotes)
-    console.log(numberOfNotes)
 
+    // For loop to append respective positional number to h3
     for(let i = 0; i < numberOfNotes.length; i++) {
         numberOfNotes[i].innerText = `Note${i+1}`
     }

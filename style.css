@@ -133,7 +133,10 @@ h1, h2 {
     padding: 15px;
     border-radius: 10px;
     width: 40%;
+    max-height: 40%;
     line-height: 1.5;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .modal p {
