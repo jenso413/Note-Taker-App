@@ -42,21 +42,22 @@ document.getElementById('add-note').addEventListener('click', function() {
     // Clear input value
     noteInput.value = '';
 
+    
     // Show modal when 'view details' is clicked
     noteButton.addEventListener('click', function() {
         
         // Show modal on click
         document.querySelector('.modal-bg').classList.add('bg-active')
 
-        // If modal has no content
-        if (modal.children.length <= 1) {
-            let modalContent = noteContent.cloneNode(true);
+        // Assigns variable modalContent to the paragraph element content that respective noteButton is associated with
+        let modalContent = noteButton.previousElementSibling.textContent;
+        
+        const modalParagraph = document.getElementById('modalParagraph');
 
-            // Append information to modal
-            modal.appendChild(modalContent);
-        }
+        modalParagraph.innerText = modalContent;
 
     });
+
 
     // Declare variable on 'x' icon
     const hideModal = document.querySelector('.fa-times');
