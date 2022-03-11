@@ -90,6 +90,15 @@ h1, h2 {
     
 }
 
+
+.note p {
+    /* Adds ellipses if text is too long */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
 .details {
     color: white;
     background-color:dodgerblue;
@@ -123,6 +132,8 @@ h1, h2 {
     background-color: white;
     padding: 15px;
     border-radius: 10px;
+    width: 40%;
+    line-height: 1.5;
 }
 
 .modal p {

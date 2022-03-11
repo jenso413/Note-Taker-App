@@ -5,6 +5,7 @@
 let noteInput = document.getElementById('note');
 
 document.getElementById('add-note').addEventListener('click', function() {
+    
     // Create new div
     let newNote = document.createElement('div');
 
@@ -34,4 +35,30 @@ document.getElementById('add-note').addEventListener('click', function() {
 
     // Clear input value
     noteInput.value = '';
+
+
+    // Show modal when 'view details' is clicked
+    noteButton.addEventListener('click', function() {
+        
+        // Show modal on click
+        document.querySelector('.modal-bg').classList.toggle('bg-active')
+
+        // Create modal variable to store content
+        const modal = document.querySelector('.modal')
+
+        // Append information to modal
+        modal.appendChild(noteContent)
+
+    });
+
+    // Declare variable on 'x' icon
+    const hideModal = document.querySelector('.fa-times');
+
+    // Hide modal again when 'x' icon clicked
+    hideModal.addEventListener('click', function() {
+
+        // Toggle classlist to hide modal
+        document.querySelector('.modal-bg').classList.toggle('bg-active')
+    })
 })
+
