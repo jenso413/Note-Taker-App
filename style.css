@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 /* Title */
@@ -24,6 +24,7 @@ body {
 h1 {
     font-size: 7rem;
     font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -87,9 +88,9 @@ h1, h2 {
     /* Trying to only have 2 on one line */
     min-width: 45%;
     flex: 1;
+    position: relative;
     
 }
-
 
 .note p {
     /* Adds ellipses if text is too long */
@@ -110,6 +111,18 @@ h1, h2 {
 .note h3 {
     font-size: 2.5rem;
     font-weight: 500;
+}
+
+.delete {
+    background-color: red;
+    padding: 8px 10px;
+    border: none;
+    border-style: none;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border-radius: 5px;
 }
 
 /* Modal */
@@ -133,10 +146,11 @@ h1, h2 {
     padding: 15px;
     border-radius: 10px;
     width: 40%;
-    max-height: 40%;
+    height: 100px;
     line-height: 1.5;
     overflow-x: hidden;
     overflow-y: scroll;
+    overflow-wrap: break-word;
 }
 
 .modal p {
